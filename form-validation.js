@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const location = document.getElementById('location').value.trim();
         const timezone = document.getElementById('timezone').value.trim();
         const nickname = document.getElementById('nickname').value.trim();
+        const discord = document.getElementById('discord').value.trim();
         const projects = document.getElementById('projects').value.trim();
         const reason = document.getElementById('reason').value.trim();
 
@@ -38,6 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
             errorMessage += 'Никнейм должен содержать минимум 3 символа.\n';
         }
 
+        if (discord.length < 3) {
+            isValid = false;
+            errorMessage += 'Discord username должен содержать минимум 3 символа.\n';
+        }
+
         if (projects.length < 10) {
             isValid = false;
             errorMessage += 'Расскажите подробнее о вашем опыте на других проектах.\n';
@@ -55,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 location,
                 timezone,
                 nickname,
+                discord,
                 projects,
                 reason
             };
@@ -125,6 +132,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (value.length < 3) {
                     isValid = false;
                     errorMessage = 'Никнейм должен содержать минимум 3 символа';
+                }
+                break;
+            case 'discord':
+                if (value.length < 3) {
+                    isValid = false;
+                    errorMessage = 'Discord username должен содержать минимум 3 символа';
                 }
                 break;
             case 'projects':
