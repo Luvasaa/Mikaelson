@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://meta-union.top/og.png"/>
+    <meta property="og:title" content="Mikaelson Family"/>
+    <meta property="og:description" content="Mikaelson Family — это уникальная семья в мире MajesticRP, где каждый участник является важной частью нашего сообщества. Мы создаем атмосферу взаимопомощи, поддержки и развития в игре."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="majesticrp, mikaelson, family, rp, roleplay">
+    <meta name="author" content="Mikaelson Family">
+    <title>Mikaelson Family</title>
+    <link rel="icon" href="images/image.svg">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form-validation.css">
+    <!-- Add Akony and Din Pro Cond fonts -->
+    <link href="https://fonts.cdnfonts.com/css/akony" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/din-pro-cond" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 400;
+            src: url(_nuxt/Gilroy-Regular.eot);
+            src: local("Gilroy Regular"), local("Gilroy-Regular"), 
+                 url(_nuxt/Gilroy-Regular.eot?#iefix) format("embedded-opentype"), 
+                 url(_nuxt/Gilroy-Regular.woff) format("woff"), 
+                 url(_nuxt/Gilroy-Regular.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 500;
+            src: url(_nuxt/Gilroy-Medium.eot);
+            src: local("Gilroy Medium"), local("Gilroy-Medium"), 
+                 url(_nuxt/Gilroy-Medium.eot?#iefix) format("embedded-opentype"), 
+                 url(_nuxt/Gilroy-Medium.woff) format("woff"), 
+                 url(_nuxt/Gilroy-Medium.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 600;
+            src: url(_nuxt/Gilroy-Semibold.eot);
+            src: local("Gilroy SemiBold"), local("Gilroy-SemiBold"), 
+                 url(_nuxt/Gilroy-Semibold.eot?#iefix) format("embedded-opentype"), 
+                 url(_nuxt/Gilroy-Semibold.woff) format("woff"), 
+                 url(_nuxt/Gilroy-Semibold.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 700;
+            src: url(_nuxt/Gilroy-Bold.eot);
+            src: local("Gilroy Bold"), local("Gilroy-Bold"), 
+                 url(_nuxt/Gilroy-Bold.eot?#iefix) format("embedded-opentype"), 
+                 url(_nuxt/Gilroy-Bold.woff) format("woff"), 
+                 url(_nuxt/Gilroy-Bold.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 900;
+            src: url(_nuxt/Gilroy-Black.eot);
+            src: local("Gilroy Black"), local("Gilroy-Black"), 
+                 url(_nuxt/Gilroy-Black.eot?#iefix) format("embedded-opentype"), 
+                 url(_nuxt/Gilroy-Black.woff) format("woff"), 
+                 url(_nuxt/Gilroy-Black.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: 'DIN Pro Cond';
+            src: url('./fonts/DINProCond-Regular.woff2') format('woff2'),
+                 url('./fonts/DINProCond-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'DIN Pro Cond';
+            src: url('./fonts/DINProCond-Bold.woff2') format('woff2'),
+                 url('./fonts/DINProCond-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        :root {
+            --primary-color: #cc9844;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --heading-font: 'Akony', sans-serif;
+            --button-font: 'DIN Pro Cond', sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+        }
+        
+        .button, button, input[type="submit"] {
+            font-family: var(--button-font);
+            background-color: var(--primary-color);
+            color: var(--background-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <div class="header__logo-img"><img src="images/image.svg" alt="Mikaelson Family Logo" width="50" height="30"></div>
+                <div class="header__logo-label">Mikaelson <span>Family</span></div>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">О семье</a></li>
+                    <li class="header__nav-item"><a href="#rules" class="header__nav-link">Правила</a></li>
+                </ul>
+            </nav>
+            <a href="#applications" class="stages-action button button--rect gold" style="display: flex; justify-content: center; align-items: center; padding: 10px 20px; text-align: center;">Подать Заявку</a>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container hero-content">
+                <h1>MIKAELSON FAMILY</h1>
+                <div class="hero-text-container">
+                    <p>Добро пожаловать в Семью Mikaelson! Мы — сплоченное сообщество игроков, где каждый участник является важной частью нашей большой семьи. Вместе мы создаем уникальную атмосферу взаимопомощи, поддержки и развития.</p>
+                    <div class="promo-tooltip">
+                        <div class="promo-tooltip-trigger">🎁 Бонус для новых игроков Majestic RP</div>
+                        <div class="promo-tooltip-content">
+                            <h4>Получите бонус при вступлении!</h4>
+                            <p>При регистрации или в игре введите промокод:</p>
+                            <div class="promo-code">Flamingo</div>
+                            <p>И получите:</p>
+                            <ul>
+                                <li>50.000$ на старт</li>
+                                <li>7 дней платинум VIP</li>
+                            </ul>
+                            <p class="promo-note">Для ввода промокода в игре напишите: /promo Flamingo</p>
+                            <a href="https://majestic-rp.ru/?utm_source=youtube&utm_medium=social&utm_campaign=flamingo" class="stages-action button button--rect gold" target="_blank">Начать игру</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- О нас -->
+        <section class="about-us section" id="about">
+            <div class="about-us__container container">
+                <div class="about-us__content">
+                    <div class="about-us__text-content">
+                        <h2 class="about-us__title">О семье</h2>
+                        <p class="about-us__description">Добро пожаловать в Семью Mikaelson, дорогой друг! Мы рады видеть тебя здесь и желаем тебе обосноваться тут, став крепкой опорой нашей семьи. Наша семья является нейтральной в отношении всех фракций и организаций штата. Вы свободны в выборе своей деятельности, будь то криминальная или государственная структура.</p>
+                        <div class="about-us__stats">
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Поддержка</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Участников</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50K$</span>
+                                <span class="stat-label">Бонус</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-us__image">
+                        <img src="about-team.png" alt="Mikaelson Family" class="team-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Правила -->
+        <section class="section rules-section" id="rules">
+            <div class="container">
+                <h2 class="section-title">Правила общения</h2>
+                <div class="rules-content">
+                    <div class="rule-item">
+                        <h3>Основные правила</h3>
+                        <ul>
+                            <li>Запрещено оскорбление участников семьи</li>
+                            <li>Запрещено токсичное поведение</li>
+                            <li>Запрещены угрозы и провокации</li>
+                            <li>Уважительное отношение ко всем членам семьи</li>
+                        </ul>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Общее положение</h3>
+                        <ul>
+                            <li>Нейтралитет ко всем фракциям</li>
+                            <li>Свобода выбора деятельности</li>
+                            <li>Взаимопомощь и поддержка</li>
+                            <li>Развитие и обучение</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Applications -->
+        <section class="section" id="applications">
+            <div class="container">
+                <h2 class="section-title">Заявка в семью</h2>
+                <form id="applicationForm">
+                    <div class="form-group"><label for="name">Как вас зовут?</label><input type="text" id="name" name="name" required></div>
+                    <div class="form-group"><label for="location">Откуда вы?</label><input type="text" id="location" name="location" required></div>
+                    <div class="form-group"><label for="timezone">Укажите свой часовой пояс.</label><input type="text" id="timezone" name="timezone" required></div>
+                    <div class="form-group"><label for="nickname">Какой ваш ник в проекте MajesticRP?</label><input type="text" id="nickname" name="nickname" required></div>
+                    <div class="form-group"><label for="projects">На каких проектах играли и сколько?</label><textarea id="projects" name="projects" rows="3" required></textarea></div>
+                    <div class="form-group"><label for="reason">Почему вы хотите вступить в семью Mikaelson?</label><textarea id="reason" name="reason" rows="3" required></textarea></div>
+                    <button type="submit" class="stages-action button button--rect gold">Отправить заявку</button>
+                </form>
+                <div id="applicationStatus" style="margin-top:20px;"></div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__nav">
+                    <div class="footer__logo">
+                        <div class="footer__logo-img"><img src="images/image.svg" alt="Mikaelson Family Logo" width="50" height="30"></div>
+                        <div class="footer__logo-label">Mikaelson <span>Family</span></div>
+                    </div>
+                </div>
+                <div class="footer__description-wrap">
+                    <div class="footer__description">Mikaelson Family — это уникальная семья в мире MajesticRP, где каждый участник является важной частью нашего сообщества. Присоединяйтесь к нам и станьте частью нашей истории.</div>
+                </div>
+                <div class="footer__links">
+                    <a href="#about" class="footer__link">О семье</a>
+                    <a href="#applications" class="footer__link">Заявка</a>
+                </div>
+                <div class="footer__owner-info">
+                    <div class="footer__owner-info-item">© 2025 Mikaelson Family. Все права защищены.</div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- Скрипты (все, кроме связанных с blackout) -->
+    <script src="form-validation.js"></script>
+    <script>
+    // Ждем полной загрузки DOM
+    document.addEventListener('DOMContentLoaded', function() {
+        // Эффект прокрутки шапки
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Обработка табов отделов
+        const deptTabs = document.querySelectorAll('.dept-tab');
+        const deptContents = document.querySelectorAll('.dept-content');
+        let tabAnimationTimer = null; // Переменная для отслеживания таймера
+        
+        deptTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Предотвращаем многократное выполнение при быстрых кликах
+                if (tabAnimationTimer) {
+                    clearTimeout(tabAnimationTimer);
+                }
+                
+                // Удаляем активный класс у всех табов
+                deptTabs.forEach(t => t.classList.remove('active'));
+                // Добавляем активный класс кликнутому табу
+                this.classList.add('active');
+                
+                // Сразу скрываем все контенты
+                deptContents.forEach(content => {
+                    content.classList.remove('active');
+                    content.style.opacity = '0';
+                    content.style.transform = 'translateY(20px)';
+                    content.style.visibility = 'hidden';
+                });
+                
+                // Получаем содержимое для отображения
+                const targetId = this.getAttribute('data-dept');
+                const targetContent = document.getElementById(`${targetId}-content`);
+                
+                if (targetContent) {
+                    // Небольшая задержка для плавной анимации
+                    tabAnimationTimer = setTimeout(() => {
+                        targetContent.classList.add('active');
+                        targetContent.style.opacity = '1';
+                        targetContent.style.transform = 'translateY(0)';
+                        targetContent.style.visibility = 'visible';
+                        tabAnimationTimer = null;
+                    }, 300);
+                }
+            });
+        });
+        
+        // Анимация для "ленивых" секций при прокрутке
+        const lazySections = document.querySelectorAll('.lazy-section');
+        
+        // Функция для проверки, находится ли элемент в поле зрения
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+            );
+        }
+        
+        // Функция для обработки скролла и активации анимаций
+        function handleScroll() {
+            lazySections.forEach(section => {
+                if (isInViewport(section) && !section.classList.contains('visible')) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        
+        // Инициализация при загрузке страницы
+        handleScroll();
+        
+        // Обработчик события скролла
+        window.addEventListener('scroll', handleScroll);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Form validation styles */
+/* Hide browser default validation styles */
+input:invalid,
+textarea:invalid,
+select:invalid {
+    box-shadow: none !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Custom styles only when triggered by JavaScript */
+.error-message {
+    color: #ff5757;
+    font-size: 14px;
+    margin-top: 6px;
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.invalid-input {
+    border-color: #ff5757 !important;
+    box-shadow: 0 0 0 2px rgba(255, 87, 87, 0.2) !important;
+}
+
+.shake {
+    animation: shake 0.5s linear;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Fix margin for form groups to accommodate validation messages */
+.form-group {
+    margin-bottom: 32px !important;
+}
+
+.form-group input:valid:not(:placeholder-shown) {
+    border-color: #4caf50 !important;
+}
+
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+} 
